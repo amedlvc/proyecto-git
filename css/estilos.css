@@ -1,0 +1,260 @@
+/*
+
+selector{
+propiedad: valor;
+
+}
+
+*/
+h1 {
+    font-size: 50px;
+    text-align: center;
+}
+
+p {
+    font-size: 12px;
+
+}
+h1{
+    color: rgb(237, 138, 196);
+}
+
+/*Selector descendente */
+section article p{ 
+    color: rgb(84, 46, 26);
+
+}
+
+/* Combinar selectores */
+.articulo-destacado h3{
+    color: rgb(142, 0, 71);
+    font-size: 30px;
+    font-style: italic;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+h3 {
+    font-family: 'Times New Roman', Times, cursive;
+    font-size: 32px;
+    text-align: center;
+    margin: 30px;
+}
+
+h4 {
+    font-family: poppins;
+    font-size: 22px;
+    text-align: center;
+}
+
+.texto{
+    color:rgb(139, 3, 80);
+    font-size: 12px;
+    background-color: rgba(184, 184, 184, 0.742);
+    width: 100 px;
+    
+}
+
+.caja-bloque {
+    background-color: blue;
+
+    /* Alto y ancho */
+     width: 300px;
+     /*min-width: ;
+     max-width: ; */
+
+     height: 400px;
+     /* min-height: ;
+     max-height: ; */
+     
+     /* ==== Border ==== */
+      border-style: solid;
+      border-width: 10px;
+      border-color: aqua;
+
+}
+.contenedor {
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+    height: 20vh;            
+}
+
+.flex-container { 
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(236, 253, 236);
+    padding: 10px;
+ }
+
+ .caja {
+    width: 25%;
+    height: 25vh;
+    background-color: rgb(190, 226, 190);
+    border-color: black;
+    border: solid 1px;
+    text-align: center;
+    line-height: 100px;
+ }
+
+ .carru {
+    width: 50%;
+ }
+
+ .mainly {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+
+ .link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+
+ .articulo-piel h1 {
+    font-style: italic;
+    color: rgb(148, 194, 148);
+ }
+
+ .rutina-piel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+
+ p {
+    text-align: justify;
+    margin: 30px; /* Ajusta los márgenes como desees */
+}
+
+.esenciales {
+    text-align: center;
+}
+
+h2{
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fotoo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.videuki {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+h5 {
+    font-family: poppins;
+    font-size: 15px;
+}
+
+.grid-main {
+    border: 5px solid black;
+    padding: 16px;
+
+    display: grid;
+
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: repeat(3,25vh);
+
+    gap: 30px;
+
+    grid-template-areas:
+    "mensual razon"
+    "anual razon"
+    "trimestral razon"
+
+}
+
+
+@media (min-widht: 320px) {
+    .grid-main {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 200px);
+    }
+}
+
+
+.seccionUno {
+    background-color: rgb(187, 187, 187);
+    grid-area: mensual;
+
+}
+
+.seccionDos {
+    background-color: white;
+    grid-area: anual;
+    
+}
+
+.seccionTres {
+    background-color: rgb(187, 187, 187);
+    grid-area: trimestral;
+    
+}
+
+.seccionCuatro {
+    background-color: rgb(255, 192, 235);
+    grid-area: razon;
+
+}
+
+.caja-bloque {
+    background-color: rgb(207, 207, 207);
+    width: 300px ;
+    height: 500px ;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.grid-container {
+    padding: 10px;
+    border: 2px solid rgb(0, 0, 0);
+    background-color: beige;
+
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 600px 600px 600px;
+
+}
+
+.grid-item {
+    background-color: aliceblue;
+    border: 2px pink;
+}
+
+.item-uno {
+    background-color: rgb(63, 63, 63);
+}
+
+
+
+.bg-container {
+    background-color: rgb(248, 221, 234);
+    margin: 55;
+    align-items: center;
+}
+
+.foto-mini {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
