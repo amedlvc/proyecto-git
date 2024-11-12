@@ -1,0 +1,67 @@
+:root {
+    --color-principal: pink;
+}
+
+h1 {
+    color:var(--color-principal)
+    
+
+}
+
+$color-principal: hotpink;
+$sombra: 0px 0px 10px pink;
+
+.titulo {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.titulo-oferta {
+
+    @extend .titulo;
+
+    font-size: 2rem;
+    font-weight: 800;
+    color: hotpink;
+    text-decoration: wavy;
+}
+
+@mixin MQ-medium (){
+    @media (min-widht:768px){
+        @content
+    }
+}
+    
+
+    
+    .nosotros {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include MQ-medium () {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+
+        }
+    }
+
+
+@mixin flex-box() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+$color: green;
+
+.caja {
+    @if $color == blue {
+        width: 100px;
+        height: 100px;
+    }
+    @else if $color == green {
+        width: 200px;
+        height: 200px;
+    }
+} 

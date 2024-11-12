@@ -1,0 +1,45 @@
+header {
+    nav {
+        ul {
+            li {
+                text-decoration: underline;
+                padding: 1rem;
+
+                .link {
+                    color: beige;
+                    background-color: rgb(77, 0, 128);
+
+                    &:hover {
+                        background-color: purple;
+                        color: white;
+                    }
+
+                    &-active {
+                        background-color: white;
+                    }
+                }
+            }
+        }
+    }
+
+    .link {
+        color: beige;
+        background-color: rgb(77, 0, 128);
+
+        &:hover {
+            background-color: purple;
+            color: white;
+        }
+
+        &-active {
+            color: white;
+        }
+
+    }
+
+    -link:hover {
+        color: rgb(77, 0, 128);
+        background-color: white;
+    }
+
+}

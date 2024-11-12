@@ -1,0 +1,20 @@
+.contacto {
+    @include flex-box (end,end)
+}
+
+$redes: (
+    facebook: blue,
+    youtube: red,
+    instagram: pink,
+);
+
+.i-facebook {
+    background-color: map-get($redes, "facebool");
+}
+
+@each $clave, $valor in $redes {
+
+    .icono-redes {
+        background-color: $valor;
+    }
+}

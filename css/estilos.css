@@ -9,14 +9,21 @@
  *   scss/main.scss 83:5  flex-box()
  *   scss/main.scss 83:5  root stylesheet */
 
-selector{
-propiedad: valor;
-
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Only 0 arguments allowed, but 2 were passed.\a     \2577 \a 75  \2502  @mixin flex-box() {\a     \2502         \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501  declaration\a... \2502 \a 83  \2502      @include flex-box(end,end)\a     \2502      ^^^^^^^^^^^^^^^^^^^^^^^^^^ invocation\a     \2575 \a   scss/main.scss 83:5  flex-box()\a   scss/main.scss 83:5  root stylesheet";
 }
-
+    
 .seccionTres {
     background-color: rgb(187, 187, 187);
     grid-area: trimestral;
+}
     
 p {
     font-size: 12px;
@@ -24,23 +31,25 @@ p {
 }
 h1{
     color: rgb(237, 138, 196);
+    text-shadow: 20px 20px 8px rgb(250, 170, 217);
 }
 
-/*Selector descendente */
-section article p{ 
-    color: rgb(84, 46, 26);
+.seccionCuatro {
+    background-color: rgb(255, 192, 235);
+    grid-area: razon;
 
 }
 
-/* Combinar selectores */
-.articulo-destacado h3{
-    color: rgb(142, 0, 71);
-    font-size: 30px;
-    font-style: italic;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-   
+.caja-bloque {
+    background-color: rgb(207, 207, 207);
+    width: 300px ;
+    height: 500px ;
+
+}
+h3 {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 h3 {
@@ -50,52 +59,25 @@ h3 {
     margin: 30px;
 }
 
-h4 {
-    font-family: poppins;
-    font-size: 22px;
-    text-align: center;
-}
-
-.texto{
-    color:rgb(139, 3, 80);
-    font-size: 12px;
-    background-color: rgba(184, 184, 184, 0.742);
-    width: 100 px;
-    
-}
-
-.caja-bloque {
-    background-color: blue;
-
-    /* Alto y ancho */
-     width: 300px;
-     /*min-width: ;
-     max-width: ; */
-
-     height: 400px;
-     /* min-height: ;
-     max-height: ; */
-     
-     /* ==== Border ==== */
-      border-style: solid;
-      border-width: 10px;
-      border-color: aqua;
-
-}
-.contenedor {
-    display: flex;
-    justify-content: center;  
-    align-items: center;      
-    height: 20vh;            
-}
-
-.flex-container { 
-    display: flex; 
-    flex-direction: column;
-    align-items: center;
-    background-color: rgb(236, 253, 236);
+.grid-container {
     padding: 10px;
- }
+    border: 2px solid rgb(0, 0, 0);
+    background-color: beige;
+
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 600px 600px 600px;
+
+}
+
+.grid-item {
+    background-color: aliceblue;
+    border: 2px pink;
+}
+
+.item-uno {
+    background-color: rgb(63, 63, 63);
+}
 
  .caja {
     width: 25%;
@@ -109,54 +91,55 @@ h4 {
 
  .carru {
     width: 50%;
- }
-
- .mainly {
+    align-items: center;
     display: flex;
     flex-direction: column;
     align-items: center;
  }
 
- .link {
-    display: flex;
-    flex-direction: column;
+.bg-container {
+    background-color: rgb(248, 221, 234);
+    margin: 55;
     align-items: center;
- }
-
- .articulo-piel h1 {
-    font-style: italic;
-    color: rgb(148, 194, 148);
- }
-
- .rutina-piel {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
- }
-
- p {
-    text-align: justify;
-    margin: 30px; /* Ajusta los márgenes como desees */
 }
 
-.esenciales {
+.foto-mini {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    font-size: 32px;
+    font-family: cursive;
+    color: rgb(42, 42, 42);
+}
+
+h3 {
+    font-size: 30px;
+    font-family: poppins;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+h4 {
+    font-size: 25px;
+    font-family: poppins;
+    margin-top: 5%;
+    margin-bottom: 2%;
     text-align: center;
 }
 
-h2{
-    font-size: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+p {
+    font-size: 18px;
+    font-family: poppins;
+    margin: 15px;
+    text-align: justify;
 }
 
 .fotoo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.videuki {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -254,14 +237,48 @@ h5 {
 
 
 
-.bg-container {
-    background-color: rgb(248, 221, 234);
-    margin: 55;
-    align-items: center;
+h1 {
+    text-align: center;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    font-family: poppins;
+    font-style: italic;
+    font-size: 50px;
+    color: hotpink;
 }
 
-.foto-mini {
+.flex-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: rgb(236, 253, 236);
+    padding: 10px;
+    font-family: poppins;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.caja {
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    background-color: rgb(148, 203, 240);
+    border: 2px solid rgb(201, 201, 201);
+    width: 250px;
+    height: 250px;
+    line-height: 80px;
+    align-items: center;
+    margin-top: 7%;
+    margin-bottom: 5%;
+
+    transform: translate(500px);
+
+    transition-duration: 1s;
+    transition-delay: 0s;
+    transition-property: background-color transform;
+}
+
+.caja:hover {
+    transform: rotate(360deg) scale(1.5);
+    background-color: rgb(0, 132, 255);
 }
