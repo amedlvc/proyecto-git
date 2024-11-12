@@ -1,16 +1,23 @@
-/*
+/* Error: Only 0 arguments allowed, but 2 were passed.
+ *     ,
+ * 75  | @mixin flex-box() {
+ *     |        ========== declaration
+ * ... |
+ * 83  |     @include flex-box(end,end)
+ *     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^ invocation
+ *     '
+ *   scss/main.scss 83:5  flex-box()
+ *   scss/main.scss 83:5  root stylesheet */
 
 selector{
 propiedad: valor;
 
 }
 
-*/
-h1 {
-    font-size: 50px;
-    text-align: center;
-}
-
+.seccionTres {
+    background-color: rgb(187, 187, 187);
+    grid-area: trimestral;
+    
 p {
     font-size: 12px;
 
