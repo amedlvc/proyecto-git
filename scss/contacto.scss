@@ -1,6 +1,4 @@
-.contacto {
-    @include flex-box (end,end)
-}
+
 
 $redes: (
     facebook: blue,
@@ -18,3 +16,16 @@ $redes: (
         background-color: $valor;
     }
 }
+
+@media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .footer-section {
+      text-align: center;
+    }
+    .social-icons a {
+      margin: 0 5px;
+    }
+  }

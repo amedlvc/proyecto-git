@@ -26,33 +26,6 @@ $sombra: 0px 0px 10px pink;
     text-decoration: wavy;
 }
 
-@mixin MQ-medium (){
-    @media (min-widht:768px){
-        @content
-    }
-}
-    
-
-    
-    .nosotros {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        @include MQ-medium () {
-            display: grid;
-            grid-template-columns: repeat(3,1fr);
-
-        }
-    }
-
-
-@mixin flex-box() {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 $color: green;
 
 .caja {
@@ -65,3 +38,44 @@ $color: green;
         height: 200px;
     }
 } 
+
+@media (max-width: 768px) {
+    .grid {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .grid {
+      grid-template-columns: 1fr; 
+    }
+  
+    .item {
+      font-size: 1rem;
+      padding: 15px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    p {
+      font-size: 14px; 
+    }
+  }
+  
+  @media (max-width: 480px) {
+    p {
+      font-size: 12px; 
+    }
+  }
+
+  @media (max-width: 480px) {
+    .flex-container {
+      flex-direction: column; /* Apila los elementos en una columna */
+      align-items: stretch;   /* Extiende los elementos al ancho del contenedor */
+    }
+  
+    .item {
+      flex: 1 1 auto; /* Ajusta automáticamente el tamaño */
+      max-width: none; /* Elimina el ancho máximo */
+    }
+  }
