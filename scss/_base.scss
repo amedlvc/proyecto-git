@@ -70,12 +70,131 @@ $color: green;
 
   @media (max-width: 480px) {
     .flex-container {
-      flex-direction: column; /* Apila los elementos en una columna */
-      align-items: stretch;   /* Extiende los elementos al ancho del contenedor */
+      flex-direction: column; 
+      align-items: stretch; 
     }
   
     .item {
-      flex: 1 1 auto; /* Ajusta automáticamente el tamaño */
-      max-width: none; /* Elimina el ancho máximo */
+      flex: 1 1 auto; 
+      max-width: none; 
     }
+  }
+
+  @media (max-width: 992px) {
+   
+    .left-column, .right-column, .middle-image {
+      flex: 1 1 100%;
+    }
+  
+    .middle-image img {
+      max-height: 300px;
+    }
+  }
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .card {
+      padding: 15px;
+    }
+  
+    .middle-image img {
+      max-height: 200px;
+    }
+  }
+
+  
+  .titulo-pagina{
+    font-family: vogue;
+    font-size: 60px;
+    font-style: italic;
+    text-align: center;
+    color: #000000;
+  }
+  ol {
+    font-family: poppins;
+    font-size: 12px;
+    margin-left: 20%;
+  
+  }
+  
+  .blush {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+  
+  }
+  .contact-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .contact-info {
+    flex: 1;
+    max-width: 45%;
+  }
+  
+  .contact-info h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-info p {
+    line-height: 1.6;
+  }
+  
+  .contact-form {
+    flex: 1;
+    max-width: 45%;
+  }
+  
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-form label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  
+
+  @media (max-width: 768px) {
+    .contact-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .contact-info,
+    .contact-form {
+      max-width: 100%;
+    }
+  
+    .contact-info {
+      margin-bottom: 2rem;
+    }
+  }
+  
+  .titulo-contacto{
+    font-family: vogue;
+    font-style: normal;
+    font-size: 60px;
+    text-align: left;
+    color: #000000;
   }
