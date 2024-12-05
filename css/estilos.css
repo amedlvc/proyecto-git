@@ -292,7 +292,7 @@ h1 {
     .footer-container {
       flex-direction: column;
       align-items: center;
-      gap: 10px;
+      gap: 5px;
     }
     .footer-section {
       text-align: center;
